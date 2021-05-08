@@ -1,0 +1,85 @@
+:root {
+  --padding: 1.5rem;
+  --clr-dark: #2f2f2f;
+  --clr-neutral: #808080;
+  --clr-accent: #e369e3;
+}
+
+* {
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-dark);
+  line-height: 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.card-content {
+  border: 1px solid var(--clr-neutral);
+  border-radius: 0.5rem;
+  padding: 8rem 1rem 1rem;
+  overflow: hidden;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  min-width: 25
+  max-width: 35ch;
+}
+
+.card-gamer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url('game.jpg');
+}
+
+.card-gardener {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('lavender.jpg');
+}
+
+.card-coder {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('coding.jpg');
+}
+
+.card-title {
+  position: relative;
+  width: max-content;
+}
+
+.card-title:after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: var(--clr-accent);
+  height: 3px;
+  width: calc(100% + var(--padding));
+  left: -1rem;
+  bottom: 0;
+}
+
+.card-body {
+}
+
+.card-btn {
+  background-color: var(--clr-accent);
+  border: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
