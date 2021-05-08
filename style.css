@@ -39,7 +39,7 @@ body {
   color: #fff;
   background-size: cover;
   background-position: center;
-  min-width: 25
+  min-width: 25;
   max-width: 35ch;
 }
 
@@ -74,8 +74,6 @@ body {
   bottom: 0;
 }
 
-.card-body {
-}
 
 .card-btn {
   background-color: var(--clr-accent);
