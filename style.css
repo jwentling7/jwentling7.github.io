@@ -1,83 +1,180 @@
 :root {
-  --padding: 1.5rem;
   --clr-dark: #2f2f2f;
   --clr-neutral: #808080;
   --clr-accent: #e369e3;
-}
-
-* {
-  margin: 0px;
-  font-family: 'Lato', sans-serif;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background: var(--clr-dark);
+  line-height: 1.5rem;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  color: #fff;
 }
 
 body {
-  display: grid;
-  place-items: center;
   min-height: 100vh;
-  background-color: var(--clr-dark);
-  line-height: 1.5rem;
 }
 
-.cards {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+nav {
+  margin: 1rem;
+  text-align: center;
+}
 
+main {
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  margin: 1rem;
+  font-size: 250%;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.15rem;
+}
+
+p {
+  margin: 10px 0px;
+}
+
+.card-section {
+  display: grid;
+  place-items: center;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 2rem;
+  width: 80%;
+}
+
+@media only screen and (max-width: 900px) {
+  .card-section {
+    grid-gap: 3rem;
+    /* TODO make this better */
+  }
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--clr-neutral);
+  border-radius: 0.5rem;
+  min-width: 26ch;
+  max-width: 35ch;
+  padding: 10rem 0 0;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.05);
+}
+
+.card-programming {
+  background-image: url('coding.jpg');
+}
+
+.card-gaming {
+  background-image: url('game.jpg');
+}
+
+.card-gardening {
+  background-image: url('lavender.jpg');
 }
 
 .card-content {
-  border: 1px solid var(--clr-neutral);
-  border-radius: 0.5rem;
-  padding: 8rem 1rem 1rem;
-  overflow: hidden;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  min-width: 25;
-  max-width: 35ch;
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 1)
+  );
+
+  transform: translateY(70%);
+  transition: transform 0.3s ease;
 }
 
-.card-gamer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url('game.jpg');
+.card-content > *:not(.card-title) {
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
-.card-gardener {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('lavender.jpg');
+.card:hover .card-content,
+.card:focus-within .card-content {
+  transform: translateY(0);
+  transition-delay: 0.3s;
 }
 
-.card-coder {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('coding.jpg');
+.card:focus-within .card-content {
+  transition-duration: 0s;
+}
+
+.card:hover .card-content > *:not(.card-title),
+.card:focus-within .card-content > *:not(.card-title) {
+  opacity: 1;
+}
+
+.card:hover .card-content > *:not(.card-title) {
+  transition-delay: 0.5s;
+}
+
+.card:focus-within .card-content > *:not(.card-title) {
+  transition-delay: 0.3s;
 }
 
 .card-title {
   position: relative;
   width: max-content;
+  padding-bottom: 7px;
 }
 
-.card-title:after {
+.card-title::after {
   content: '';
   position: absolute;
-  display: block;
-  background-color: var(--clr-accent);
-  height: 3px;
-  width: calc(100% + var(--padding));
-  left: -1rem;
+  left: calc(var(--padding) * -1);
   bottom: 0;
+  width: calc(100% + var(--padding));
+  height: 4px;
+  background-color: var(--clr-accent);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+  transform: scaleX(1);
+}
 
-.card-btn {
-  background-color: var(--clr-accent);
-  border: none;
+.button {
+  display: inline;
+  border-color: #b150b1;
   padding: 0.5rem 1rem;
+  background-color: var(--clr-accent);
+  cursor: pointer;
+  font-weight: 700;
   text-transform: uppercase;
+  color: var(--clr-dark);
+
+  transition: transform 5s ease;
+}
+
+.button:hover {
+  transform: scale(0.95);
+  /* TODO fix font weight on hover */
 }
