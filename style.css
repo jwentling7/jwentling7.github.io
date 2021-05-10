@@ -1,3 +1,7 @@
+/*---------------------------------*/
+/* BASIC SETUP
+/*---------------------------------*/
+
 :root {
   --clr-dark: #2f2f2f;
   --clr-neutral: #808080;
@@ -21,55 +25,88 @@ html {
   color: #fff;
 }
 
-body {
-  min-height: 100vh;
-}
-
-nav {
-  margin: 1rem;
-  text-align: center;
-}
-
-main {
+header {
   display: grid;
   place-items: center;
+  min-height: 100vh;
 }
+/*---------------------------------*/
+/* HEADINGS
+/*---------------------------------*/
 
 h1 {
-  margin: 1rem;
+  margin: 20px;
   font-size: 250%;
-  line-height: 2.5rem;
-  text-transform: uppercase;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 0.15rem;
 }
 
+/*---------------------------------*/
+/* PARAGRAPHS
+/*---------------------------------*/
+
 p {
-  margin: 10px 0px;
+  padding-top: 20px;
+  font-size: 110%;
+  word-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+  text-align: center;
 }
+
+/*---------------------------------*/
+/* BUTTONS
+/*---------------------------------*/
+
+.button {
+  display: inline;
+  border-color: #b150b1;
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-accent);
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--clr-dark);
+
+  transition: transform 5s ease;
+}
+
+.button:hover {
+  transform: scale(0.95);
+  /* TODO fix font weight on hover */
+}
+
+/*---------------------------------*/
+/* ABOUT SECTION
+/*---------------------------------*/
+
+.about-section {
+  padding: 0% 15%;
+}
+
+.about-me {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
+}
+
+/*---------------------------------*/
+/* CARD SECTION
+/*---------------------------------*/
 
 .card-section {
-  display: grid;
-  place-items: center;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin: 2rem;
-  width: 80%;
-}
-
-@media only screen and (max-width: 900px) {
-  .card-section {
-    grid-gap: 3rem;
-    /* TODO make this better */
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
+  flex: 0 1 250px;
+  margin: 1rem;
   overflow: hidden;
   border: 1px solid var(--clr-neutral);
   border-radius: 0.5rem;
-  min-width: 26ch;
-  max-width: 35ch;
+  max-height: 425px;
   padding: 10rem 0 0;
   background-size: cover;
   background-position: center;
@@ -103,6 +140,7 @@ p {
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 1)
   );
+  height: 100%;
 
   transform: translateY(70%);
   transition: transform 0.3s ease;
@@ -138,6 +176,7 @@ p {
 
 .card-title {
   position: relative;
+  margin: 0px;
   width: max-content;
   padding-bottom: 7px;
 }
@@ -161,20 +200,8 @@ p {
   transform: scaleX(1);
 }
 
-.button {
-  display: inline;
-  border-color: #b150b1;
-  padding: 0.5rem 1rem;
-  background-color: var(--clr-accent);
-  cursor: pointer;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--clr-dark);
-
-  transition: transform 5s ease;
-}
-
-.button:hover {
-  transform: scale(0.95);
-  /* TODO fix font weight on hover */
+.card-body {
+  margin: 10px 0px;
+  padding: 0px;
+  font-size: 100%;
 }
