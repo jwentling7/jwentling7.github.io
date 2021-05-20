@@ -1,68 +1,914 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Jessica Wentling" />
     <meta
       name="description"
-      content="Jessica Wentling's personal website and portfolio."
+      content="Hi! My name is Jessica Wentling. I love programming, gaming, and gardening. Check out my profile!"
     />
     <meta name="author" content="Jessica Wentling" />
     <meta
       name="keywords"
-      content="Programming, Web Development, Gaming, Gardening"
+      content="jessica wentling, jessica, wentling, jwentling7, programming, web development, front-end, web, website, developer, gaming, video game, gardening, plants"
     />
     <meta name="theme-color" content="#e369e3" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Jessica Wentling" />
+    <meta name="twitter:title" content="Jessica Wentling's Personal Website" />
     <meta
       name="twitter:description"
       content="Hi! My name is Jessica Wentling. I love programming, gaming, and gardening. Check out my profile!"
     />
-    <meta name="twitter:url" content="https://jessicawentling.com" />
+    <meta name="twitter:url" content="https://jessicawentling.com/v1" />
     <meta
       name="twitter:image"
-      content="https://jessicawentling.com/favicon.ico"
+      content="https://jessicawentling.com/v1/images/jw-logo-1200x682.jpg"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Jessica Wentling" />
-    <meta property="og:url" content="https://jessicawentling.com" />
+    <meta property="og:title" content="Jessica Wentling's Personal Website" />
+    <meta property="og:url" content="https://jessicawentling.com/v1" />
     <meta
       property="og:image"
-      content="https://jessicawentling.com/favicon.ico"
+      content="https://jessicawentling.com/v1/images/jw-logo-1200x682.jpg"
     />
     <meta
       property="og:description"
       content="Hi! My name is Jessica Wentling. I love programming, gaming, and gardening. Check out my profile!"
     />
-    <!--
-      <base
-      href="https://jessicawentling.com"
-      target="_blank"
-    />
-    -->
+
     <title>Jessica Wentling</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="script" href="script.js" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/queries.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" type="image/icon" href="favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="images/jw-logo-favicon.png"
+    />
   </head>
 
-  <body>
-    <header>
-      <div>
-        <h1>Jessica Wentling</h1>
-        <p>Site coming soon :]</p>
+  <body id="page-top">
+    <nav class="main-nav fixed flex">
+      <div class="main-nav-logo">
+        <a href="/">
+          <img height="64" src="images/jw-logo.svg" alt="Jessica Wentling Logo"
+        /></a>
       </div>
-    </header>
+      <div class="main-nav-links">
+        <ol class="flex">
+          <li>
+            <a
+              href="#about-section"
+              onclick="hideMainNav()"
+              class="hover-underline"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#experience-section" class="hover-underline">Experience</a>
+          </li>
+          <li>
+            <a href="#projects-section" class="hover-underline">Projects</a>
+          </li>
+          <li>
+            <a href="#contact-section" class="hover-underline">Contact</a>
+          </li>
+        </ol>
+      </div>
+      <div class="main-nav-button">
+        <a
+          href="documents/jwentling-resume.pdf"
+          target="_blank"
+          type="button/html"
+          class="button button-full"
+          >Resume</a
+        >
+      </div>
 
+      <div class="mobile-nav hidden">
+        <div class="hamburger">
+          <img
+            height="64"
+            src="icons/menu_white_24dp.svg"
+            alt="hamburger"
+            class="ham-icon"
+          />
+          <img
+            height="64"
+            src="icons/close_white_24dp.svg"
+            alt="close"
+            class="close-icon hidden"
+          />
+        </div>
+        <nav class="mobile-nav-links fixed hidden">
+          <ol class="flex">
+            <li class="mobile-link hover-underline">
+              <a href="#about-section">About</a>
+            </li>
+            <li class="mobile-link hover-underline">
+              <a href="#experience-section">Experience</a>
+            </li>
+            <li class="mobile-link hover-underline">
+              <a href="#projects-section">Projects</a>
+            </li>
+            <li class="mobile-link hover-underline">
+              <a href="#contact-section">Contact</a>
+            </li>
+            <li>
+              <a
+                href="documents/jwentling-resume.pdf"
+                type="button/html"
+                target="_blank"
+                class="mobile-resume-button button button-full block"
+                >Resume</a
+              >
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </nav>
+
+    <div class="external-links fixed hidden flex">
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jessica-wentling"
+            type="img/html"
+            target="_blank"
+            ><img
+              height="32"
+              src="icons/iconmonstr-linkedin-3.svg"
+              alt="LinkedIn Logo"
+              class="social-media-logo"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/jwentling7"
+            type="img/html"
+            target="_blank"
+            ><img
+              height="32"
+              src="icons/GitHub-Mark.svg"
+              alt="GitHub Logo"
+              class="social-media-logo"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/jwentling7"
+            type="img/html"
+            target="_blank"
+            ><img
+              height="32"
+              src="icons/instagram-seeklogo-white.svg"
+              alt="Instagram Logo"
+              class="social-media-logo"
+          /></a>
+        </li>
+        <li>
+          <a href="mailto:wentlingjessica@gmail.com" type="img/html">
+            <img
+              height="32"
+              src="icons/email_white_24dp.svg"
+              alt="Email Logo"
+              class="social-media-logo"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="documents/jwentling-resume.pdf"
+            target="_blank"
+            type="img/html"
+          >
+            <img
+              height="32"
+              src="icons/description_white_24dp.svg"
+              alt="Resume Logo"
+              class="social-media-logo"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <a href="#header" type="img/html" class="return-to-top fixed hidden">
+      <img
+        height="32"
+        src="icons/expand_less_black_24dp.svg"
+        alt="Return To Top"
+      />
+    </a>
+
+    <div class="page-content">
+      <header id="header" class="flex fade">
+        <div class="text-center">
+          <h1>Jessica Wentling</h1>
+          <p>👩‍💻 Programming 🧙‍♀️ Gaming 🌷 Gardening</p>
+          <a
+            href="mailto:wentlingjessica@gmail.com"
+            class="header-button button button-full"
+          >
+            Contact Me!
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section id="about-section" class="about-section fade">
+          <h2 class="underline">About Me</h2>
+          <div class="about-content flex">
+            <figure>
+              <img
+                src="images/jessica-wentling.webp"
+                alt="Jessica Wentling Headshot"
+              />
+              <figcaption class="photo-credit text-center">
+                <a
+                  href="https://www.deechauhan.com/"
+                  type="text/html"
+                  target="_blank"
+                  title="Deepika's Website"
+                  >📷 Deepika Chauhan</a
+                >
+              </figcaption>
+            </figure>
+            <div>
+              <p>
+                Hi! My name is Jessica, and I enjoy programming. The first time
+                I can remember interacting with code was back in the early days
+                of MySpace. We got to design our own little spaces on the
+                internet, and I absolutely loved it. In 2015, I graduated with a
+                B.S. in Computer Science. I will always remember the feeling
+                when I created my first 'Hello World' and calculator program in
+                C++.
+              </p>
+              <p>
+                Web Design and Development became a recent interest to me. I
+                wanted to create online spaces for people and apply my
+                programming skills at the same time. At my most recent job, I
+                was able to utilize some of my HTML, CSS, and JavaScript
+                knowledge. I got to work on real projects for real clients for
+                the first time. It was fun and fulfilling!
+              </p>
+              <p>
+                I am energetic and passionate about my work, welcoming any
+                challenge or opportunity to create new things.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience-section" class="experience-section fade">
+          <h2 class="underline">Experience</h2>
+          <div class="experiences flex">
+            <div class="tabs flex">
+              <button
+                onclick="currentExp(1)"
+                class="exp-link button button-clear"
+              >
+                Tray, Inc.
+              </button>
+              <button
+                onclick="currentExp(2)"
+                class="exp-link button button-clear"
+              >
+                PetSmart - Reston
+              </button>
+              <button
+                onclick="currentExp(3)"
+                class="exp-link button button-clear"
+              >
+                PetSmart - Alexandria
+              </button>
+            </div>
+            <div class="exp">
+              <div>
+                <h4>
+                  <span class="position">Front-End Web Developer at</span>
+                  <span class="location pink hover-underline"
+                    ><a
+                      href="https://trayinc.com"
+                      type="text/html"
+                      target="_blank"
+                      >Tray, Inc.</a
+                    >
+                  </span>
+                </h4>
+                <p class="dates">June 2020 - May 2021</p>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    Collaborated with team of three to develop and maintain
+                    client websites and projects.
+                  </li>
+                  <li>
+                    Worked with a variety of languages, platforms, and content
+                    management systems such as HTML, CSS, JavaScript, Wix,
+                    Shopify, iMIS EMS, and WordPress.
+                  </li>
+                  <li>
+                    Utilized Adobe Illustrator and Photoshop to edit product
+                    images and set up stationery templates for e-commerce
+                    websites.
+                  </li>
+                  <li>
+                    Managed client user and product information through an
+                    internal distributor management software and Microsoft
+                    Excel.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exp">
+              <div>
+                <h4>
+                  <span class="position">Assistant Store Leader at</span>
+                  <span class="location pink hover-underline"
+                    ><a
+                      href="https://www.petsmart.com/"
+                      type="text/html"
+                      target="_blank"
+                      >PetSmart</a
+                    >
+                  </span>
+                </h4>
+                <p class="dates">April 2019 - October 2019</p>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    Drove day in and day out operational excellence through
+                    hiring, scheduling, and budgeting.
+                  </li>
+                  <li>
+                    Developed team members and leaders to be able to promote
+                    from within the company.
+                  </li>
+                  <li>
+                    Led team by clearly communicating standards, and quickly
+                    followed up on any opportunities, resulting in cohesion
+                    among team members.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exp">
+              <div>
+                <h4>
+                  <span class="position"
+                    >Merchandising and Inventory Leader at</span
+                  >
+                  <span class="location pink hover-underline"
+                    ><a
+                      href="https://www.petsmart.com/"
+                      type="text/html"
+                      target="_blank"
+                      >PetSmart</a
+                    >
+                  </span>
+                </h4>
+                <p class="dates">June 2017 - April 2019</p>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    Executed merchandising strategies and inventory management
+                    tactics.
+                  </li>
+                  <li>Developed team members and ensured high productivity.</li>
+                  <li>
+                    Created an editable PetSmart Hotel flyer promoting services
+                    to local apartment complexes.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects-section" class="projects-section fade">
+          <h2 class="underline">Projects</h2>
+          <div class="cards flex">
+            <div class="card card-programming">
+              <div class="card-content">
+                <h4 class="card-title">Programming</h4>
+                <p class="card-body">
+                  I have been fascinated by the world of programming ever since
+                  my first 'Hello World' and calculator programs.
+                </p>
+                <button
+                  type="button"
+                  class="button-programming button button-full"
+                >
+                  Check it out
+                </button>
+              </div>
+            </div>
+            <div class="card card-gaming">
+              <div class="card-content">
+                <h4 class="card-title">Gaming</h4>
+                <p class="card-body">
+                  I grew up with video games. They helped me connect with some
+                  of the most important people in my life.
+                </p>
+                <button type="button" class="button-gaming button button-full">
+                  Check it out
+                </button>
+              </div>
+            </div>
+            <div class="card card-gardening">
+              <div class="card-content">
+                <h4 class="card-title">Gardening</h4>
+                <p class="card-body">
+                  There is something satisfying about seeing that little bit of
+                  green poke its head out of the ground in the morning.
+                </p>
+                <button
+                  type="button"
+                  class="button-gardening button button-full"
+                >
+                  Check it out
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="close-project fixed hidden">
+            <img
+              height="50"
+              src="icons/close_white_24dp.svg"
+              alt="Close Projects"
+            />
+          </div>
+          <div class="projects fixed hidden">
+            <div class="project project-programming hidden">
+              <h3 class="underline">Programming</h3>
+              <div class="proj-wrapper flex">
+                <div class="proj-item flex">
+                  <a href="https://aphsa.org/" type="img/html" target="_blank">
+                    <img src="images/aphsa-org.jpg" alt="APHSA's Main Website"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Refactored some of the code for
+                      <span class="pink"
+                        ><a
+                          href="https://aphsa.org/"
+                          type="img/html"
+                          target="_blank"
+                          >American Public Human Services Association's</a
+                        ></span
+                      >
+                      main website. Also built/revamped a few of their pages.
+                    </p>
+                    <ul>
+                      <li>iMIS EMS</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://aphsaannualreport.com/"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/aphsa-annual-report.jpg"
+                      alt="APHSA's Annual Report Website"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Built a website to house
+                      <span class="pink"
+                        ><a
+                          href="https://aphsa.org/"
+                          type="img/html"
+                          target="_blank"
+                          >APHSA's</a
+                        ></span
+                      >
+                      2020 Annual Report.
+                    </p>
+                    <ul>
+                      <li>Wix</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://trayinc.com/"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img src="images/trayinc.jpg" alt="Tray, Inc. Website"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Worked with team to revamp
+                      <span class="pink"
+                        ><a
+                          href="https://trayinc.com/"
+                          type="img/html"
+                          target="_blank"
+                          >Tray, Inc's</a
+                        ></span
+                      >
+                      website.
+                    </p>
+                    <ul>
+                      <li>WordPress</li>
+                      <li>CSS</li>
+                      <li>Google Analytics</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://shopfightingblindness.org/"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/shop-ffb.jpg"
+                      alt="Foundation Fighting Blindness e-Commerce Store"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Worked with team to build an
+                      <span class="pink"
+                        ><a
+                          href="https://shopfightingblindness.org/"
+                          type="img/html"
+                          target="_blank"
+                          >e-Commerce Store</a
+                        ></span
+                      >
+                      for
+                      <span class="pink"
+                        ><a
+                          href="https://www.fightingblindness.org/"
+                          type="img/html"
+                          target="_blank"
+                          >Foundation Fighting Blindness.</a
+                        ></span
+                      >
+                    </p>
+                    <ul>
+                      <li>Shopify</li>
+                      <li>Liquid</li>
+                      <li>Accessibility</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project-gaming hidden">
+              <h3>Gaming</h3>
+              <div class="proj-wrapper flex">
+                <div class="proj-item flex">
+                  <a
+                    href="https://worldofwarcraft.com/en-us/"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/WoW-me-tiadre.jpg"
+                      alt="Tiadre Character on World of Warcraft"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      This is my newest character on World of Warcraft -
+                      Shadowlands. Been playing on and off since Burning Crusade
+                      with the Wrath expansion being the most fun I had (all my
+                      friends played then - also when I met my husband 😉).
+                    </p>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://www.elderscrollsonline.com/en-us/home"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/elder-scrolls-online-me-and-my-husband.jpg"
+                      alt="Elder Scrolls Online Me and My Husband"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      I was SO hyped for Elder Scrolls Online to be released -
+                      finished the main story the summer it came out. I love the
+                      Elder Scroll universe and the art style of the games. Oh,
+                      and this is me eating a snack while waiting for the
+                      husband to figure out our nexts steps (typical!).
+                    </p>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://fallout.bethesda.net/en/"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/fallout-76-me-good-time-at-waterpark.jpg"
+                      alt="Fallout 76 Me at a Waterpark"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Another one I was hyped for! Unfortunately, I didn't get
+                      too far into this, but I loved playing it! The world was
+                      fun to explore and I enjoyed some of the quests! With what
+                      they were working to do with this game, hoping for good
+                      things in the future from Bethesda.
+                    </p>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://www.team17.com/games/overcooked/"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/overcooked-me-and-my-husband.jpg"
+                      alt="Overcooked with my and my husband"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      When the Nintendo Switch came out, I found a ton of gems -
+                      Overcooked and Overcooked 2 being a couple of them. This
+                      is definitely one of those "friendship breaking" games
+                      which makes it SO much fun to play with others (especially
+                      my husband).
+                    </p>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://www.animal-crossing.com/new-horizons/"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/animal-crossing-new-horizons-me-and-my-bro.jpg"
+                      alt="Animal Crossing: New Horizons Me and My Bro"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      I grew up with Nintendo, so I was always drawn to their
+                      games. Animal Crossing being one of them! This is New
+                      Horizon on the Switch with me and my brother playing
+                      together showing off some BIG catches.
+                    </p>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="https://www.minecraft.net/en-us"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/minecraft-itsa-me-tiadre.jpg"
+                      alt="Minecraft my Tiadre character with custom skin"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      One of those games that I can always come back to:
+                      Minecraft! I went on a binge watch of the Hermitcraft
+                      streamers (among a few others) at one point. They got me
+                      into being really creative and finding my own style of
+                      building. Love the openness and infinite amount of things
+                      you can do in this game, with or without friends!
+                      <span class="pink"
+                        ><a
+                          href="https://www.instagram.com/tiadre.baenett/"
+                          type="text/html"
+                          target="_blank"
+                          >@tiadre.baenett</a
+                        ></span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project-gardening hidden">
+              <h3>Gardening</h3>
+              <div class="proj-wrapper flex">
+                <div class="proj-item flex">
+                  <a
+                    href="images/fall-bulbs-spring-blooms.jpg"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/fall-bulbs-spring-blooms.jpg"
+                      alt="Daffodils, Pink Tulips, Hyacinths, and Grape Muscari"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Daffodils, Tulips, Hyacinths, and Grape Muscari are some
+                      of the bulbs I tried out this year. These spring-blooming
+                      bulbs should be planted in the fall a few weeks before the
+                      first hard frost. They bring in some lovely color in time
+                      for spring to begin.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="proj-item flex">
+                  <a
+                    href="images/tete-a-tete-daffodils.jpg"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/tete-a-tete-daffodils.jpg"
+                      alt="Tete-a-tete Daffodils"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Tete-a-tete daffodil - zone 4 through 8 bulb - is a very
+                      early blooming miniature daffodil. They only get up to
+                      about 6-8" tall, but they can have multiple flowers per
+                      stem. Daffodils are wonderful perennials, so leave them be
+                      until the foliage dies back to ensure a strong bloom for
+                      the next year.
+                    </p>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="images/juniper-procumbens-after.jpg"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/juniper-procumbens-after.jpg"
+                      alt="Juniper Procumbens Bonsai"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Juniper Procumbens - zone 4 through 9 conifer - is a
+                      popular shrub among landscapers and bonsai enthusiasts.
+                      They are easy to grow, requiring little effort, and they
+                      make an excellent first-time bonsai plant. Find one at
+                      your local nursery and try it out!
+                    </p>
+                  </div>
+                </div>
+                <div class="proj-item flex">
+                  <a
+                    href="images/bloom-a-thon-pink-double-azalea-rhododendron.jpg"
+                    type="img/html"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/bloom-a-thon-pink-double-azalea-rhododendron.jpg"
+                      alt="Bloom-a-thon Pink Double Reblooming Azalea Rhododendron"
+                  /></a>
+                  <div class="proj-description">
+                    <p>
+                      Proven Winner's
+                      <span class="pink"
+                        ><a
+                          href="https://www.provenwinners.com/plants/rhododendron/bloom-thon-pink-double-reblooming-azalea-rhododendron-x"
+                          type="text/html"
+                          target="_blank"
+                          >Bloom-a-thon Pink Double Reblooming Azalea</a
+                        ></span
+                      >
+                      is absolutely beautiful with it's many ruffled flowers.
+                      This Rhododendron blooms in the spring for about 4-6
+                      weeks, then again mid summer for another long show!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact-section" class="contact-section flex fade">
+          <div class="contact-text-box text-center">
+            <h2>Let's Work Together!</h2>
+            <p>
+              I am currently looking for opportunities in Web Development. What
+              I will bring to the team is an eye for detail and my programming
+              knowledge.
+            </p>
+            <div class="contact-buttons">
+              <a
+                href="mailto:wentlingjessica@gmail.com"
+                type="button/html"
+                class="button button-full"
+                >Contact Me</a
+              >
+              <a
+                href="documents/jwentling-resume.pdf"
+                target="_blank"
+                type="button/html"
+                class="button button-ghost"
+                >Resume</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="text-center">
+        <div class="footer-links hidden">
+          <ul class="flex">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/jessica-wentling"
+                type="img/html"
+                target="_blank"
+                ><img
+                  height="32"
+                  src="icons/iconmonstr-linkedin-3.svg"
+                  alt="LinkedIn Logo"
+                  class="social-media-logo"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/jwentling7"
+                type="img/html"
+                target="_blank"
+                ><img
+                  height="32"
+                  src="icons/GitHub-Mark.svg"
+                  alt="GitHub Logo"
+                  class="social-media-logo"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/jwentling7"
+                type="img/html"
+                target="_blank"
+                ><img
+                  height="32"
+                  src="icons/instagram-seeklogo-white.svg"
+                  alt="Instagram Logo"
+                  class="social-media-logo"
+              /></a>
+            </li>
+            <li>
+              <a href="mailto:wentlingjessica@gmail.com" type="img/html">
+                <img
+                  height="32"
+                  src="icons/email_white_24dp.svg"
+                  alt="Email Logo"
+                  class="social-media-logo"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="documents/jwentling-resume.pdf"
+                target="_blank"
+                type="img/html"
+              >
+                <img
+                  height="32"
+                  src="icons/description_white_24dp.svg"
+                  alt="Resume Logo"
+                  class="social-media-logo"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer-author">
+          <a
+            href="https://github.com/jwentling7/v1"
+            type="text/html"
+            target="_blank"
+            title="Source Code For This Website"
+            >Designed and built by Jessica Wentling.</a
+          >
+        </p>
+      </footer>
+    </div>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
+    <!-- <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-CGRTL61L4S"
     ></script>
@@ -74,6 +920,7 @@
       gtag('js', new Date());
 
       gtag('config', 'G-CGRTL61L4S');
-    </script>
+    </script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>

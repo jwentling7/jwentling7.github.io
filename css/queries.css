@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1080px) {
+  main,
+  footer {
+    padding: 0px 100px;
+  }
+
+  .nav-links li {
+    margin: 0px 10px;
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  .about-content {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :is(main, footer) {
+    padding: 0px 50px;
+  }
+
+  .main-nav-links,
+  .main-nav-button {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    margin: 1rem;
+  }
+
+  .experience-section {
+    padding-left: 20px;
+  }
+
+  .experiences {
+    flex-direction: column;
+  }
+
+  .tabs {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .tabs::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    border: 1px solid lightgray;
+    left: 0;
+    bottom: 0;
+  }
+
+  .exp-link {
+    border: none;
+  }
+
+  .proj-wrapper {
+    grid-template-columns: none;
+  }
+
+  .external-links {
+    display: none;
+  }
+
+  .footer-links {
+    display: block;
+  }
+
+  .close-project img {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  main,
+  footer {
+    padding: 0px 25px;
+  }
+
+  .main-nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /* .main-nav-logo img,
+  .hamburger img {
+    height: 42px;
+  } */
+}
