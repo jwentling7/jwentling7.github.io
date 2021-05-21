@@ -1,25 +1,4 @@
 /*---------------------------------*/
-/* ANIMATIONS
-/*---------------------------------*/
-
-body {
-  animation: fadeIn linear 2s;
-}
-
-/* TODO TODO TODO TODO  */
-@keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  25% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-/*---------------------------------*/
 /* REUSABLE CODE
 /*---------------------------------*/
 .fixed {
@@ -291,10 +270,6 @@ header {
 
 .about-content {
   align-items: center;
-}
-
-.photo-credit {
-  font-size: 0.9rem;
 }
 
 .about-section img {
