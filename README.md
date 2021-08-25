@@ -1,4 +1,4 @@
-<img src="screenshot.png" alt="Jessica Wentling Personal Website v1" width="400" height="300">
+<img src="/images/jwentling-v1.jpg" alt="Jessica Wentling Personal Website v1" width="400" height="300">
 
 # Personal Website v1
 
